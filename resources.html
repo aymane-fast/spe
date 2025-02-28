@@ -6,6 +6,7 @@
     <title>المصادر الرقمية - جمعية SPE</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script>
@@ -23,118 +24,268 @@
             }
         }
     </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(45deg, #0b96f5, #1d3c54);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+        }
+
+        .resource-card {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .resource-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(11,150,245,0.1), rgba(29,60,84,0.1));
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .resource-card:hover::before {
+            opacity: 1;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .filter-button {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .filter-button::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #0b96f5;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .filter-button:hover::after {
+            transform: scaleX(1);
+        }
+
+        .animated-bg {
+            background: linear-gradient(-45deg, #0b96f5, #1d3c54, #0ea5e9, #0284c7);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
 </head>
 <body class="font-tajawal">
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-white/80 backdrop-blur-lg shadow-sm z-50">
+    <!-- Enhanced Navigation (Same as index.html) -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-lg shadow-lg z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <div class="text-3xl font-bold text-primary">SPE</div>
+                <div class="flex items-center gap-2">
+                    <div class="text-3xl font-bold gradient-text">SPE</div>
+                    <div class="h-6 w-px bg-gray-200 mx-2"></div>
+                    <div class="text-sm text-gray-600">الصحة النفسية للأطفال</div>
+                </div>
                 <div class="flex gap-8 items-center">
-                    <a href="index.html" class="hover:text-primary transition-colors">الرئيسية</a>
-                    <a href="about.html" class="hover:text-primary transition-colors">من نحن</a>
-                    <a href="resources.html" class="text-primary">المصادر الرقمية</a>
-                    <a href="initiatives.html" class="hover:text-primary transition-colors">مبادراتنا</a>
-                    <a href="volunteer.html" class="hover:text-primary transition-colors">تطوع معنا</a>
-                    <a href="contact.html" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-colors">تواصل معنا</a>
+                    <a href="index.html" class="relative group">
+                        <span class="text-gray-700 hover:text-primary transition-colors">الرئيسية</span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                    </a>
+                    <a href="about.html" class="relative group">
+                        <span class="text-gray-700 hover:text-primary transition-colors">من نحن</span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                    </a>
+                    <a href="resources.html" class="text-primary font-semibold">المصادر الرقمية</a>
+                    <a href="initiatives.html" class="relative group">
+                        <span class="text-gray-700 hover:text-primary transition-colors">مبادراتنا</span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                    </a>
+                    <a href="volunteer.html" class="relative group">
+                        <span class="text-gray-700 hover:text-primary transition-colors">تطوع معنا</span>
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                    </a>
+                    <a href="contact.html" class="bg-primary hover:bg-blue-600 text-white px-6 py-2.5 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center gap-2">
+                        <span>تواصل معنا</span>
+                        <i class="fas fa-arrow-left text-sm"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 bg-gradient-to-r from-blue-50 to-blue-100">
+    <!-- Enhanced Hero Section -->
+    <section class="pt-32 pb-20 animated-bg">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto">
-                <h1 class="text-5xl font-bold text-secondary mb-6">مكتبتنا الرقمية</h1>
-                <p class="text-xl text-gray-600">مجموعة متنوعة من المصادر المجانية لدعم الصحة النفسية للأطفال</p>
+                <span class="inline-block bg-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                    محتوى متنوع ومفيد
+                </span>
+                <h1 class="text-5xl font-bold text-white mb-6">مصادرنا المختارة</h1>
+                <p class="text-xl text-white/90">مجموعة منتقاة من أفضل المحتويات التوعوية في مجال الصحة النفسية للأطفال</p>
             </div>
             
-            <!-- Search Bar -->
-            <div class="mt-12 max-w-2xl mx-auto">
+            <!-- Enhanced Search Bar -->
+            <div class="mt-12 max-w-2xl mx-auto relative">
                 <div class="relative">
-                    <input type="text" placeholder="ابحث في المصادر..." class="w-full px-6 py-4 rounded-full border-2 border-gray-200 focus:border-primary focus:outline-none">
-                    <button class="absolute left-4 top-1/2 -translate-y-1/2 text-primary">
+                    <input type="text" 
+                           placeholder="ابحث في المصادر..." 
+                           class="w-full px-6 py-4 rounded-full border-2 border-white/30 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:border-white backdrop-blur-sm">
+                    <button class="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-primary transition-colors">
                         <i class="fas fa-search text-xl"></i>
                     </button>
+                </div>
+                <!-- Popular Tags -->
+                <div class="flex gap-3 mt-4 justify-center flex-wrap">
+                    <span class="text-white/70 text-sm">#الأكثر بحثاً:</span>
+                    <a href="#" class="text-white hover:text-primary text-sm transition-colors">#القلق_عند_الأطفال</a>
+                    <a href="#" class="text-white hover:text-primary text-sm transition-colors">#التربية_الإيجابية</a>
+                    <a href="#" class="text-white hover:text-primary text-sm transition-colors">#الثقة_بالنفس</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Resource Categories -->
-    <section class="py-20">
+    <!-- Enhanced Resource Categories -->
+    <section class="py-20 -mt-10">
         <div class="max-w-7xl mx-auto px-6">
             <!-- Category Filters -->
-            <div class="flex flex-wrap gap-4 mb-12 justify-center">
-                <button class="bg-primary text-white px-6 py-2 rounded-full">جميع المصادر</button>
-                <button class="bg-gray-100 hover:bg-gray-200 px-6 py-2 rounded-full">مقالات توعوية</button>
-                <button class="bg-gray-100 hover:bg-gray-200 px-6 py-2 rounded-full">فيديوهات تعليمية</button>
-                <button class="bg-gray-100 hover:bg-gray-200 px-6 py-2 rounded-full">كتب إلكترونية</button>
-                <button class="bg-gray-100 hover:bg-gray-200 px-6 py-2 rounded-full">أدوات تفاعلية</button>
+            <div class="bg-white rounded-2xl shadow-xl p-6 mb-12">
+                <div class="flex flex-wrap gap-6 justify-center">
+                    <button class="filter-button bg-primary text-white px-6 py-3 rounded-full hover:shadow-lg transition-all">
+                        جميع المصادر
+                    </button>
+                    <button class="filter-button bg-white text-gray-700 px-6 py-3 rounded-full hover:bg-gray-50 transition-all">
+                        <i class="fab fa-youtube ml-2"></i>
+                        فيديوهات يوتيوب
+                    </button>
+                    <button class="filter-button bg-white text-gray-700 px-6 py-3 rounded-full hover:bg-gray-50 transition-all">
+                        <i class="fab fa-instagram ml-2"></i>
+                        منشورات انستغرام
+                    </button>
+                    <button class="filter-button bg-white text-gray-700 px-6 py-3 rounded-full hover:bg-gray-50 transition-all">
+                        <i class="fas fa-book ml-2"></i>
+                        كتب مجانية
+                    </button>
+                    <button class="filter-button bg-white text-gray-700 px-6 py-3 rounded-full hover:bg-gray-50 transition-all">
+                        <i class="fas fa-podcast ml-2"></i>
+                        بودكاست
+                    </button>
+                </div>
             </div>
 
             <!-- Resources Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Resource Card 1 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:-translate-y-2 transition-all duration-300">
+                <!-- YouTube Video Card -->
+                <div class="resource-card bg-white rounded-2xl shadow-lg overflow-hidden">
                     <div class="relative h-48">
                         <img src="https://via.placeholder.com/400x250" alt="resource" class="w-full h-full object-cover">
-                        <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm">
-                            مقال
+                        <div class="absolute top-4 right-4 bg-red-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                            <i class="fab fa-youtube ml-1"></i>يوتيوب
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <button class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors group">
+                                <i class="fab fa-youtube text-red-600 text-3xl group-hover:scale-110 transition-transform"></i>
+                            </button>
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">كيف نعزز الثقة بالنفس عند الأطفال؟</h3>
-                        <p class="text-gray-600 mb-4">دليل شامل للوالدين حول بناء ثقة الطفل بنفسه وتعزيز صحته النفسية</p>
+                        <div class="flex items-center gap-2 mb-3">
+                            <img src="https://via.placeholder.com/30" alt="channel" class="w-8 h-8 rounded-full">
+                            <span class="text-gray-600 text-sm">قناة الصحة النفسية</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 hover:text-primary transition-colors">كيف نتعامل مع القلق عند الأطفال؟</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-2">شرح مفصل عن أسباب وطرق التعامل مع القلق عند الأطفال</p>
                         <div class="flex items-center justify-between">
                             <div class="flex items-center gap-2 text-gray-500">
                                 <i class="fas fa-clock"></i>
-                                <span>10 دقائق قراءة</span>
-                            </div>
-                            <a href="#" class="text-primary font-semibold hover:underline">اقرأ المزيد</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Resource Card 2 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:-translate-y-2 transition-all duration-300">
-                    <div class="relative h-48">
-                        <img src="https://via.placeholder.com/400x250" alt="resource" class="w-full h-full object-cover">
-                        <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm">
-                            فيديو
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">التعامل مع القلق عند الأطفال</h3>
-                        <p class="text-gray-600 mb-4">فيديو توضيحي يشرح كيفية مساعدة الأطفال في التغلب على القلق</p>
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center gap-2 text-gray-500">
-                                <i class="fas fa-video"></i>
                                 <span>15 دقيقة</span>
                             </div>
-                            <a href="#" class="text-primary font-semibold hover:underline">شاهد الآن</a>
+                            <a href="#" class="text-primary font-semibold hover:text-blue-600 transition-colors flex items-center gap-2">
+                                شاهد الفيديو
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Resource Card 3 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:-translate-y-2 transition-all duration-300">
+                <!-- Instagram Post Card -->
+                <div class="resource-card bg-white rounded-2xl shadow-lg overflow-hidden">
                     <div class="relative h-48">
                         <img src="https://via.placeholder.com/400x250" alt="resource" class="w-full h-full object-cover">
-                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm">
-                            كتاب إلكتروني
+                        <div class="absolute top-4 right-4 bg-pink-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                            <i class="fab fa-instagram ml-1"></i>انستغرام
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">دليل الصحة النفسية للأطفال</h3>
-                        <p class="text-gray-600 mb-4">كتاب شامل يغطي جميع جوانب الصحة النفسية للأطفال</p>
+                        <div class="flex items-center gap-2 mb-3">
+                            <img src="https://via.placeholder.com/30" alt="profile" class="w-8 h-8 rounded-full">
+                            <span class="text-gray-600 text-sm">@mental_health_kids</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 hover:text-primary transition-colors">نصائح لتعزيز الثقة بالنفس</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-2">سلسلة منشورات عن بناء الثقة بالنفس عند الأطفال</p>
                         <div class="flex items-center justify-between">
                             <div class="flex items-center gap-2 text-gray-500">
-                                <i class="fas fa-book"></i>
-                                <span>50 صفحة</span>
+                                <i class="fas fa-images"></i>
+                                <span>سلسلة منشورات</span>
                             </div>
-                            <a href="#" class="text-primary font-semibold hover:underline">حمل الآن</a>
+                            <a href="#" class="text-primary font-semibold hover:text-blue-600 transition-colors flex items-center gap-2">
+                                تصفح المنشورات
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Free E-Book Card -->
+                <div class="resource-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="relative h-48">
+                        <img src="https://via.placeholder.com/400x250" alt="resource" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-green-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                            <i class="fas fa-book ml-1"></i>كتاب مجاني
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <img src="https://via.placeholder.com/30" alt="author" class="w-8 h-8 rounded-full">
+                            <span class="text-gray-600 text-sm">د. محمد أحمد</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 hover:text-primary transition-colors">دليل الوالدين للصحة النفسية</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-2">كتاب شامل عن الصحة النفسية للأطفال - متاح مجاناً</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-gray-500">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>PDF - 50 صفحة</span>
+                            </div>
+                            <a href="#" class="text-primary font-semibold hover:text-blue-600 transition-colors flex items-center gap-2">
+                                تحميل مجاني
+                                <i class="fas fa-download"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -142,115 +293,72 @@
 
             <!-- Load More Button -->
             <div class="text-center mt-12">
-                <button class="bg-white border-2 border-primary text-primary px-8 py-3 rounded-full hover:bg-primary hover:text-white transition-colors">
-                    المزيد من المصادر
+                <button class="group bg-white border-2 border-primary text-primary px-8 py-4 rounded-full hover:bg-primary hover:text-white transition-all duration-300 flex items-center gap-2 mx-auto">
+                    <span>المزيد من المصادر</span>
+                    <i class="fas fa-arrow-down group-hover:animate-bounce"></i>
                 </button>
             </div>
         </div>
     </section>
 
-    <!-- Featured Resources -->
+    <!-- Enhanced Featured Resources -->
     <section class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 text-center">مصادر مميزة</h2>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold gradient-text inline-block">مصادر مميزة</h2>
+            </div>
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow-lg flex gap-6 items-center">
-                    <div class="w-24 h-24 flex-shrink-0 bg-primary/10 rounded-xl flex items-center justify-center">
-                        <i class="fas fa-podcast text-4xl text-primary"></i>
+                <div class="bg-white p-8 rounded-2xl shadow-lg flex gap-6 items-center card-hover">
+                    <div class="w-32 h-32 flex-shrink-0 bg-primary/10 rounded-2xl flex items-center justify-center">
+                        <i class="fab fa-spotify text-5xl text-primary"></i>
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold mb-2">بودكاست الصحة النفسية</h3>
+                        <span class="text-sm text-primary font-semibold">بودكاست</span>
+                        <h3 class="text-2xl font-bold mb-3">حديث الصحة النفسية</h3>
                         <p class="text-gray-600 mb-4">سلسلة حلقات صوتية مع خبراء في مجال الصحة النفسية للأطفال</p>
-                        <a href="#" class="text-primary font-semibold hover:underline">استمع الآن</a>
+                        <a href="#" class="text-primary font-semibold hover:text-blue-600 transition-colors flex items-center gap-2">
+                            استمع على سبوتيفاي
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
                     </div>
                 </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-lg flex gap-6 items-center">
-                    <div class="w-24 h-24 flex-shrink-0 bg-primary/10 rounded-xl flex items-center justify-center">
-                        <i class="fas fa-clipboard-check text-4xl text-primary"></i>
+                <div class="bg-white p-8 rounded-2xl shadow-lg flex gap-6 items-center card-hover">
+                    <div class="w-32 h-32 flex-shrink-0 bg-primary/10 rounded-2xl flex items-center justify-center">
+                        <i class="fab fa-telegram text-5xl text-primary"></i>
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold mb-2">قائمة التحقق اليومية</h3>
-                        <p class="text-gray-600 mb-4">أداة تفاعلية لمتابعة الحالة النفسية للطفل</p>
-                        <a href="#" class="text-primary font-semibold hover:underline">جرب الأداة</a>
+                        <span class="text-sm text-primary font-semibold">قناة تيليجرام</span>
+                        <h3 class="text-2xl font-bold mb-3">نصائح يومية</h3>
+                        <p class="text-gray-600 mb-4">نصائح وإرشادات يومية للوالدين في مجال الصحة النفسية</p>
+                        <a href="#" class="text-primary font-semibold hover:text-blue-600 transition-colors flex items-center gap-2">
+                            انضم للقناة
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Newsletter Section -->
-    <section class="py-20 bg-gradient-to-r from-primary to-blue-600">
+    <!-- Enhanced Newsletter Section -->
+    <section class="py-20 animated-bg">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <h2 class="text-4xl font-bold text-white mb-8">اشترك في نشرتنا البريدية</h2>
             <p class="text-white/80 text-xl mb-12 max-w-2xl mx-auto">
                 احصل على أحدث المصادر والمقالات مباشرة إلى بريدك الإلكتروني
             </p>
             <div class="max-w-xl mx-auto flex gap-4">
-                <input type="email" placeholder="البريد الإلكتروني" class="flex-1 px-6 py-4 rounded-full focus:outline-none">
-                <button class="bg-white text-primary px-8 py-4 rounded-full font-semibold hover:shadow-xl transition-all">
+                <input type="email" 
+                       placeholder="البريد الإلكتروني" 
+                       class="flex-1 px-6 py-4 rounded-full bg-white/10 border-2 border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-white backdrop-blur-sm">
+                <button class="bg-white text-primary px-8 py-4 rounded-full font-semibold hover:bg-opacity-90 transition-all transform hover:scale-105">
                     اشترك الآن
                 </button>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-secondary text-white py-16">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-12">
-                <div>
-                    <div class="text-3xl font-bold mb-6">SPE</div>
-                    <p class="text-white/70">جمعية متخصصة في تعزيز الصحة النفسية للأطفال من خلال المبادرات الرقمية والمجتمعية</p>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-6">روابط سريعة</h3>
-                    <ul class="space-y-4">
-                        <li><a href="about.html" class="text-white/70 hover:text-white">من نحن</a></li>
-                        <li><a href="resources.html" class="text-white/70 hover:text-white">المصادر الرقمية</a></li>
-                        <li><a href="initiatives.html" class="text-white/70 hover:text-white">مبادراتنا</a></li>
-                        <li><a href="volunteer.html" class="text-white/70 hover:text-white">تطوع معنا</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-6">تواصل معنا</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-2">
-                            <i class="fas fa-envelope"></i>
-                            <span class="text-white/70">info@spe.org.sa</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <i class="fas fa-phone"></i>
-                            <span class="text-white/70">+966 123 456 789</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span class="text-white/70">الرياض، المملكة العربية السعودية</span>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-6">تابعنا</h3>
-                    <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-white/10 mt-12 pt-8 text-center">
-                <p class="text-white/70">جميع الحقوق محفوظة © جمعية SPE 2024</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer (Same as index.html) -->
 </body>
 </html> 
