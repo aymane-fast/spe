@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا - جمعية SPE</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0b96f5',
+                        secondary: '#1d3c54',
+                    },
+                    fontFamily: {
+                        tajawal: ['Tajawal', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-tajawal">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-lg shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-3xl font-bold text-primary">SPE</div>
+                <div class="flex gap-8 items-center">
+                    <a href="index.html" class="hover:text-primary transition-colors">الرئيسية</a>
+                    <a href="about.html" class="hover:text-primary transition-colors">من نحن</a>
+                    <a href="resources.html" class="hover:text-primary transition-colors">المصادر الرقمية</a>
+                    <a href="initiatives.html" class="hover:text-primary transition-colors">مبادراتنا</a>
+                    <a href="volunteer.html" class="hover:text-primary transition-colors">تطوع معنا</a>
+                    <a href="contact.html" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-colors">تواصل معنا</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-r from-blue-50 to-blue-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto">
+                <h1 class="text-5xl font-bold text-secondary mb-6">تواصل معنا</h1>
+                <p class="text-xl text-gray-600">نحن هنا للإجابة على استفساراتك ومساعدتك في كل ما تحتاج</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-phone text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">اتصل بنا</h3>
+                    <p class="text-gray-600">+966 123 456 789</p>
+                    <p class="text-gray-600">+966 123 456 788</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-envelope text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">راسلنا</h3>
+                    <p class="text-gray-600">info@spe.org.sa</p>
+                    <p class="text-gray-600">support@spe.org.sa</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-map-marker-alt text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">موقعنا</h3>
+                    <p class="text-gray-600">الرياض، المملكة العربية السعودية</p>
+                    <p class="text-gray-600">حي الملقا</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="bg-white rounded-2xl shadow-xl p-8">
+                <h2 class="text-3xl font-bold text-center mb-12">أرسل رسالتك</h2>
+                <form class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 mb-2">الاسم الأول</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">الاسم الأخير</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">البريد الإلكتروني</label>
+                        <input type="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">رقم الجوال</label>
+                        <input type="tel" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">نوع الاستفسار</label>
+                        <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none">
+                            <option>استفسار عام</option>
+                            <option>طلب مساعدة</option>
+                            <option>اقتراح تعاون</option>
+                            <option>أخرى</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">الرسالة</label>
+                        <textarea rows="6" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-600 transition-colors">
+                            إرسال الرسالة
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">الأسئلة الشائعة</h2>
+            <div class="space-y-4">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-bold mb-2">كيف يمكنني المساهمة في الجمعية؟</h3>
+                    <p class="text-gray-600">يمكنك المساهمة من خلال التطوع معنا أو المشاركة في مبادراتنا المختلفة</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-bold mb-2">هل خدماتكم مجانية؟</h3>
+                    <p class="text-gray-600">نعم، جميع خدماتنا ومواردنا متاحة مجاناً للجميع</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-bold mb-2">كم يستغرق الرد على الاستفسارات؟</h3>
+                    <p class="text-gray-600">نحرص على الرد خلال 24 ساعة عمل من استلام الاستفسار</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-12">تابعنا على مواقع التواصل</h2>
+            <div class="flex justify-center gap-6">
+                <a href="#" class="w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+                    <i class="fab fa-twitter text-2xl"></i>
+                </a>
+                <a href="#" class="w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+                <a href="#" class="w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="#" class="w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+                    <i class="fab fa-youtube text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div>
+                    <div class="text-3xl font-bold mb-6">SPE</div>
+                    <p class="text-white/70">جمعية متخصصة في تعزيز الصحة النفسية للأطفال من خلال المبادرات الرقمية والمجتمعية</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6">روابط سريعة</h3>
+                    <ul class="space-y-4">
+                        <li><a href="about.html" class="text-white/70 hover:text-white">من نحن</a></li>
+                        <li><a href="resources.html" class="text-white/70 hover:text-white">المصادر الرقمية</a></li>
+                        <li><a href="initiatives.html" class="text-white/70 hover:text-white">مبادراتنا</a></li>
+                        <li><a href="volunteer.html" class="text-white/70 hover:text-white">تطوع معنا</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6">تواصل معنا</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-envelope"></i>
+                            <span class="text-white/70">info@spe.org.sa</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-phone"></i>
+                            <span class="text-white/70">+966 123 456 789</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="text-white/70">الرياض، المملكة العربية السعودية</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6">تابعنا</h3>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-12 pt-8 text-center">
+                <p class="text-white/70">جميع الحقوق محفوظة © جمعية SPE 2024</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدورات التدريبية - SPE</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0b96f5',
+                        secondary: '#1d3c54',
+                    },
+                    fontFamily: {
+                        tajawal: ['Tajawal', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-tajawal">
+    <!-- Navigation (Same as other pages) -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-lg shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-3xl font-bold text-primary">SPE</div>
+                <div class="flex gap-8 items-center">
+                    <a href="index.html" class="hover:text-primary transition-colors">الرئيسية</a>
+                    <a href="about.html" class="hover:text-primary transition-colors">من نحن</a>
+                    <a href="content.html" class="hover:text-primary transition-colors">المحتوى الرقمي</a>
+                    <a href="courses.html" class="text-primary">الدورات</a>
+                    <a href="blog.html" class="hover:text-primary transition-colors">المدونة</a>
+                    <a href="contact.html" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-colors">تواصل معنا</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Courses Header -->
+    <section class="pt-32 pb-20 bg-gradient-to-r from-blue-50 to-blue-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <h1 class="text-5xl font-bold text-secondary mb-6">الدورات التدريبية</h1>
+            <p class="text-xl text-gray-600 max-w-2xl">دورات تدريبية متخصصة عن بعد في مجال الصحة النفسية للأطفال</p>
+        </div>
+    </section>
+
+    <!-- Course Categories -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex gap-6 mb-12 overflow-x-auto pb-4">
+                <button class="bg-primary text-white px-6 py-2 rounded-full">جميع الدورات</button>
+                <button class="bg-gray-100 hover:bg-gray-200 px-6 py-2 rounded-full">التربية الإيجابية</button>
+                <button class="bg-gray-100 hover:bg-gray-200 px-6 py-2 rounded-full">الذكاء العاطفي</button>
+                <button class="bg-gray-100 hover:bg-gray-200 px-6 py-2 rounded-full">المهارات الاجتماعية</button>
+                <button class="bg-gray-100 hover:bg-gray-200 px-6 py-2 rounded-full">التحديات السلوكية</button>
+            </div>
+
+            <!-- Featured Courses -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Course Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="relative">
+                        <img src="https://via.placeholder.com/400x250" alt="course" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm">
+                            مميز
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">أساسيات التربية الإيجابية</h3>
+                        <p class="text-gray-600 mb-4">تعلم أساسيات التربية الإيجابية وتطبيقاتها العملية</p>
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-clock text-primary"></i>
+                                <span>12 ساعة</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-video text-primary"></i>
+                                <span>24 درس</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-primary">299 ريال</span>
+                            <button class="bg-primary text-white px-6 py-2 rounded-full hover:bg-blue-600">سجل الآن</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="relative">
+                        <img src="https://via.placeholder.com/400x250" alt="course" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm">
+                            جديد
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">تنمية الذكاء العاطفي</h3>
+                        <p class="text-gray-600 mb-4">استراتيجيات عملية لتنمية الذكاء العاطفي عند الأطفال</p>
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-clock text-primary"></i>
+                                <span>10 ساعات</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-video text-primary"></i>
+                                <span>20 درس</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-primary">249 ريال</span>
+                            <button class="bg-primary text-white px-6 py-2 rounded-full hover:bg-blue-600">سجل الآن</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="relative">
+                        <img src="https://via.placeholder.com/400x250" alt="course" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">التعامل مع التحديات السلوكية</h3>
+                        <p class="text-gray-600 mb-4">حلول عملية للتعامل مع التحديات السلوكية الشائعة</p>
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-clock text-primary"></i>
+                                <span>8 ساعات</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-video text-primary"></i>
+                                <span>16 درس</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-primary">199 ريال</span>
+                            <button class="bg-primary text-white px-6 py-2 rounded-full hover:bg-blue-600">سجل الآن</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Features -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">مميزات الدورات التدريبية</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-certificate text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">شهادة معتمدة</h3>
+                    <p class="text-gray-600">شهادة إتمام معتمدة عند إكمال الدورة</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-clock text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">تعلم ذاتي</h3>
+                    <p class="text-gray-600">تعلم حسب وقتك وسرعتك الخاصة</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-comments text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">دعم مباشر</h3>
+                    <p class="text-gray-600">دعم فني ومتابعة مستمرة من المدربين</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-mobile-alt text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">تطبيق محمول</h3>
+                    <p class="text-gray-600">تعلم من أي مكان عبر تطبيقنا</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">آراء المتدربين</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://via.placeholder.com/60" alt="user" class="w-12 h-12 rounded-full">
+                        <div>
+                            <h4 class="font-bold">سارة محمد</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"استفدت كثيراً من الدورة وتعلمت أساليب جديدة في التربية الإيجابية"</p>
+                </div>
+                <!-- Add more testimonials as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as other pages) -->
+    <footer class="bg-secondary text-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div>
+                    <div class="text-3xl font-bold mb-6">SPE</div>
+                    <p class="text-white/70">المنصة الرقمية الرائدة في مجال الصحة النفسية للأطفال</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6">روابط سريعة</h3>
+                    <ul class="space-y-4">
+                        <li><a href="about.html" class="text-white/70 hover:text-white">من نحن</a></li>
+                        <li><a href="content.html" class="text-white/70 hover:text-white">المحتوى الرقمي</a></li>
+                        <li><a href="courses.html" class="text-white/70 hover:text-white">الدورات</a></li>
+                        <li><a href="blog.html" class="text-white/70 hover:text-white">المدونة</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6">تواصل معنا</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-envelope"></i>
+                            <span class="text-white/70">info@spe.com</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-phone"></i>
+                            <span class="text-white/70">+966 123 456 789</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6">تابعنا</h3>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-12 pt-8 text-center">
+                <p class="text-white/70">جميع الحقوق محفوظة © SPE 2024</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

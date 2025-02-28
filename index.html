@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPE - الصحة النفسية للأطفال</title>
+    <title>SPE - جمعية الصحة النفسية للأطفال</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -25,23 +25,26 @@
         }
     </script>
 </head>
-<body>
-    <!-- Innovative Navigation -->
-    <nav class="main-nav">
-        <div class="nav-container">
-            <div class="nav-logo">SPE</div>
-            <div class="nav-links">
-                <a href="#home">الرئيسية</a>
-                <a href="#about">من نحن</a>
-                <a href="#goals">أهدافنا</a>
-                <a href="#services">خدماتنا</a>
-                <a href="#contact" class="nav-cta">تواصل معنا</a>
+<body class="font-tajawal">
+    <!-- Enhanced Navigation -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-lg shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-3xl font-bold text-primary">SPE</div>
+                <div class="flex gap-8 items-center">
+                    <a href="index.html" class="hover:text-primary transition-colors">الرئيسية</a>
+                    <a href="about.html" class="hover:text-primary transition-colors">من نحن</a>
+                    <a href="resources.html" class="hover:text-primary transition-colors">المصادر الرقمية</a>
+                    <a href="initiatives.html" class="hover:text-primary transition-colors">مبادراتنا</a>
+                    <a href="volunteer.html" class="hover:text-primary transition-colors">تطوع معنا</a>
+                    <a href="contact.html" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-colors">تواصل معنا</a>
+                </div>
             </div>
         </div>
     </nav>
-     <!-- Hero Section -->
+
+    <!-- Enhanced Hero Section -->
     <section id="home" class="relative min-h-screen pt-28 overflow-hidden bg-gradient-to-br from-gray-50 to-blue-50">
-        <!-- Decorative Elements -->
         <div class="absolute inset-0 overflow-hidden">
             <div class="absolute w-[500px] h-[500px] -right-20 -top-20 bg-primary/5 rounded-full blur-3xl"></div>
             <div class="absolute w-[300px] h-[300px] -left-20 top-40 bg-secondary/5 rounded-full blur-2xl"></div>
@@ -49,43 +52,55 @@
 
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <!-- Content -->
                 <div class="text-right space-y-8">
                     <h1 class="text-6xl font-bold leading-tight">
-                        <span class="block text-primary mb-2">طفل سعيد..</span>
-                        <span class="text-secondary">مستقبل واعد!</span>
+                        <span class="block text-primary mb-2">نحو مستقبل</span>
+                        <span class="text-secondary">أكثر صحة نفسية لأطفالنا</span>
                     </h1>
                     <p class="text-gray-600 text-xl max-w-xl">
-                        نساعد الآباء على فهم احتياجات أطفالهم النفسية وتوفير بيئة آمنة وداعمة لنموهم السليم.
+                        جمعية متخصصة في تعزيز الصحة النفسية للأطفال من خلال المحتوى الرقمي المجاني والمبادرات المجتمعية
                     </p>
                     <div class="flex gap-4">
-                        <button class="bg-gradient-to-r from-primary to-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center gap-2">
-                            ابدأ رحلتك معنا
+                        <a href="resources.html" class="bg-gradient-to-r from-primary to-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center gap-2">
+                            تصفح مصادرنا
                             <i class="fas fa-arrow-left"></i>
-                        </button>
-                        <button class="border-2 border-secondary text-secondary px-8 py-4 rounded-full text-lg font-semibold hover:bg-secondary hover:text-white transition-all duration-300">
-                            تعرف علينا أكثر
-                        </button>
+                        </a>
+                        <a href="volunteer.html" class="border-2 border-secondary text-secondary px-8 py-4 rounded-full text-lg font-semibold hover:bg-secondary hover:text-white transition-all duration-300">
+                            انضم إلينا
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-8 mt-12">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary">5000+</div>
+                            <div class="text-gray-600">مستفيد</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary">20+</div>
+                            <div class="text-gray-600">مبادرة</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary">100+</div>
+                            <div class="text-gray-600">متطوع</div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Visual Elements -->
+                <!-- Enhanced Visual Elements -->
                 <div class="relative">
                     <div class="relative aspect-square">
-                        <!-- Animated Elements -->
-                        <div class="absolute top-1/4 right-1/4 animate-float-slow">
-                            <div class="w-20 h-20 bg-white rounded-2xl shadow-xl flex items-center justify-center transform rotate-12">
-                                <i class="fas fa-brain text-3xl text-primary"></i>
+                        <div class="absolute top-1/4 right-1/4 animate-bounce">
+                            <div class="w-24 h-24 bg-white rounded-2xl shadow-xl flex items-center justify-center transform rotate-12">
+                                <i class="fas fa-heart text-4xl text-primary"></i>
                             </div>
                         </div>
-                        <div class="absolute top-1/2 left-1/4 animate-float-medium">
-                            <div class="w-20 h-20 bg-white rounded-2xl shadow-xl flex items-center justify-center transform -rotate-12">
-                                <i class="fas fa-heart text-3xl text-primary"></i>
+                        <div class="absolute top-1/2 left-1/4 animate-pulse">
+                            <div class="w-24 h-24 bg-white rounded-2xl shadow-xl flex items-center justify-center transform -rotate-12">
+                                <i class="fas fa-brain text-4xl text-primary"></i>
                             </div>
                         </div>
-                        <div class="absolute bottom-1/4 right-1/3 animate-float-fast">
-                            <div class="w-20 h-20 bg-white rounded-2xl shadow-xl flex items-center justify-center">
-                                <i class="fas fa-star text-3xl text-primary"></i>
+                        <div class="absolute bottom-1/4 right-1/3 animate-bounce">
+                            <div class="w-24 h-24 bg-white rounded-2xl shadow-xl flex items-center justify-center">
+                                <i class="fas fa-child text-4xl text-primary"></i>
                             </div>
                         </div>
                     </div>
@@ -94,90 +109,196 @@
         </div>
     </section>
 
-    <!-- Modern Goals Section -->
-    <section class="goals" id="goals">
-        <div class="section-container">
-            <h2 class="section-title">أهدافنا</h2>
-            <div class="goals-grid">
-                <div class="goal-card">
-                    <div class="goal-icon">
-                        <i class="fas fa-brain fa-2x"></i>
+    <!-- Our Impact Section -->
+    <section class="py-20 bg-white" id="impact">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-secondary">أثرنا في المجتمع</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-book-reader text-2xl text-primary"></i>
                     </div>
-                    <h3>تعزيز الوعي النفسي</h3>
-                    <p>نشر الوعي حول أهمية الصحة النفسية للأطفال في المجتمع</p>
+                    <h3 class="text-xl font-bold mb-4">محتوى توعوي مجاني</h3>
+                    <p class="text-gray-600">مكتبة رقمية شاملة من المقالات والفيديوهات التوعوية المجانية</p>
                 </div>
-                <div class="goal-card">
-                    <div class="goal-icon">
-                        <i class="fas fa-graduation-cap fa-2x"></i>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-hands-helping text-2xl text-primary"></i>
                     </div>
-                    <h3>التعليم المستمر</h3>
-                    <p>توفير موارد تعليمية متجددة للآباء والمربين</p>
+                    <h3 class="text-xl font-bold mb-4">مبادرات مجتمعية</h3>
+                    <p class="text-gray-600">برامج ومبادرات تفاعلية لتعزيز الصحة النفسية في المجتمع</p>
                 </div>
-                <div class="goal-card">
-                    <div class="goal-icon">
-                        <i class="fas fa-hands-holding-child fa-2x"></i>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-2xl text-primary"></i>
                     </div>
-                    <h3>الدعم المتكامل</h3>
-                    <p>بناء نظام دعم شامل للأسر والمؤسسات التعليمية</p>
+                    <h3 class="text-xl font-bold mb-4">مجتمع داعم</h3>
+                    <p class="text-gray-600">شبكة من المتخصصين والمتطوعين لدعم صحة أطفالنا النفسية</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Interactive Services Section -->
-    <section class="services" id="services">
-        <div class="section-container">
-            <h2 class="section-title">خدماتنا</h2>
-            <div class="services-showcase">
-                <div class="service-item active">
-                    <div class="service-content">
-                        <h3>استشارات نفسية</h3>
-                        <p>نقدم استشارات متخصصة للآباء والمربين</p>
+    <!-- Latest Initiatives -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-secondary">أحدث مبادراتنا</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:-translate-y-2 transition-all duration-300">
+                    <div class="relative h-48">
+                        <img src="https://via.placeholder.com/400x250" alt="مبادرة" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-primary/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <a href="#" class="text-white text-lg font-bold">اقرأ المزيد</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">حملة "صحتهم النفسية مسؤوليتنا"</h3>
+                        <p class="text-gray-600 mb-4">حملة توعوية رقمية لتعزيز دور الأسرة في الصحة النفسية للأطفال</p>
+                        <div class="flex items-center gap-4 text-sm text-gray-500">
+                            <span class="flex items-center gap-1">
+                                <i class="fas fa-calendar"></i>
+                                مارس 2024
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <i class="fas fa-users"></i>
+                                1000+ مشارك
+                            </span>
+                        </div>
                     </div>
                 </div>
-                <div class="service-item">
-                    <div class="service-content">
-                        <h3>ورش عمل تفاعلية</h3>
-                        <p>برامج تدريبية عملية للتعامل مع الأطفال</p>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:-translate-y-2 transition-all duration-300">
+                    <div class="relative h-48">
+                        <img src="https://via.placeholder.com/400x250" alt="مبادرة" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-primary/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <a href="#" class="text-white text-lg font-bold">اقرأ المزيد</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">منصة "دعم"</h3>
+                        <p class="text-gray-600 mb-4">منصة رقمية للتواصل مع المختصين وتبادل الخبرات</p>
+                        <div class="flex items-center gap-4 text-sm text-gray-500">
+                            <span class="flex items-center gap-1">
+                                <i class="fas fa-calendar"></i>
+                                فبراير 2024
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <i class="fas fa-users"></i>
+                                500+ مستخدم
+                            </span>
+                        </div>
                     </div>
                 </div>
-                <div class="service-item">
-                    <div class="service-content">
-                        <h3>موارد تعليمية</h3>
-                        <p>مكتبة متكاملة من المواد التعليمية والإرشادية</p>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:-translate-y-2 transition-all duration-300">
+                    <div class="relative h-48">
+                        <img src="https://via.placeholder.com/400x250" alt="مبادرة" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-primary/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <a href="#" class="text-white text-lg font-bold">اقرأ المزيد</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">برنامج "مرشد"</h3>
+                        <p class="text-gray-600 mb-4">برنامج تدريبي للمتطوعين في مجال الصحة النفسية للأطفال</p>
+                        <div class="flex items-center gap-4 text-sm text-gray-500">
+                            <span class="flex items-center gap-1">
+                                <i class="fas fa-calendar"></i>
+                                يناير 2024
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <i class="fas fa-users"></i>
+                                50+ متطوع
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Modern Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <div class="footer-logo">SPE</div>
-                <p>نحو مستقبل أفضل لأطفالنا</p>
+    <!-- Join Us CTA -->
+    <section class="py-20 bg-gradient-to-r from-primary to-blue-600">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-white mb-8">كن جزءاً من التغيير</h2>
+            <p class="text-white/80 text-xl mb-12 max-w-2xl mx-auto">
+                انضم إلى جمعيتنا كمتطوع وساهم في بناء مستقبل أفضل لأطفالنا
+            </p>
+            <div class="flex gap-4 justify-center">
+                <a href="volunteer.html" class="bg-white text-primary px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    تطوع معنا
+                </a>
+                <a href="donate.html" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-primary transition-all duration-300">
+                    ادعم مبادراتنا
+                </a>
             </div>
-            <div class="footer-links">
-                <div class="social-links">
-                    <a href="#" class="social-link">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="social-link">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="social-link">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="#" class="social-link">
-                        <i class="fab fa-facebook"></i>
-                    </a>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer -->
+    <footer class="bg-secondary text-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div>
+                    <div class="text-3xl font-bold mb-6">SPE</div>
+                    <p class="text-white/70">جمعية متخصصة في تعزيز الصحة النفسية للأطفال من خلال المبادرات الرقمية والمجتمعية</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6">روابط سريعة</h3>
+                    <ul class="space-y-4">
+                        <li><a href="about.html" class="text-white/70 hover:text-white">من نحن</a></li>
+                        <li><a href="resources.html" class="text-white/70 hover:text-white">المصادر الرقمية</a></li>
+                        <li><a href="initiatives.html" class="text-white/70 hover:text-white">مبادراتنا</a></li>
+                        <li><a href="volunteer.html" class="text-white/70 hover:text-white">تطوع معنا</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6">تواصل معنا</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-envelope"></i>
+                            <span class="text-white/70">info@spe.org.sa</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-phone"></i>
+                            <span class="text-white/70">+966 123 456 789</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="text-white/70">الرياض، المملكة العربية السعودية</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6">تابعنا</h3>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="footer-copyright">
-                <p>جميع الحقوق محفوظة © SPE 2024</p>
+            <div class="border-t border-white/10 mt-12 pt-8 text-center">
+                <p class="text-white/70">جميع الحقوق محفوظة © جمعية SPE 2024</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        ScrollReveal().reveal('.animate-on-scroll', {
+            delay: 200,
+            distance: '20px',
+            origin: 'bottom',
+            interval: 100
+        });
+    </script>
 </body>
 </html>

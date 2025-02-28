@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المصادر الرقمية - جمعية SPE</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0b96f5',
+                        secondary: '#1d3c54',
+                    },
+                    fontFamily: {
+                        tajawal: ['Tajawal', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-tajawal">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-lg shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-3xl font-bold text-primary">SPE</div>
+                <div class="flex gap-8 items-center">
+                    <a href="index.html" class="hover:text-primary transition-colors">الرئيسية</a>
+                    <a href="about.html" class="hover:text-primary transition-colors">من نحن</a>
+                    <a href="resources.html" class="text-primary">المصادر الرقمية</a>
+                    <a href="initiatives.html" class="hover:text-primary transition-colors">مبادراتنا</a>
+                    <a href="volunteer.html" class="hover:text-primary transition-colors">تطوع معنا</a>
+                    <a href="contact.html" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-colors">تواصل معنا</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-r from-blue-50 to-blue-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto">
+                <h1 class="text-5xl font-bold text-secondary mb-6">مكتبتنا الرقمية</h1>
+                <p class="text-xl text-gray-600">مجموعة متنوعة من المصادر المجانية لدعم الصحة النفسية للأطفال</p>
+            </div>
+            
+            <!-- Search Bar -->
+            <div class="mt-12 max-w-2xl mx-auto">
+                <div class="relative">
+                    <input type="text" placeholder="ابحث في المصادر..." class="w-full px-6 py-4 rounded-full border-2 border-gray-200 focus:border-primary focus:outline-none">
+                    <button class="absolute left-4 top-1/2 -translate-y-1/2 text-primary">
+                        <i class="fas fa-search text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resource Categories -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Category Filters -->
+            <div class="flex flex-wrap gap-4 mb-12 justify-center">
+                <button class="bg-primary text-white px-6 py-2 rounded-full">جميع المصادر</button>
+                <button class="bg-gray-100 hover:bg-gray-200 px-6 py-2 rounded-full">مقالات توعوية</button>
+                <button class="bg-gray-100 hover:bg-gray-200 px-6 py-2 rounded-full">فيديوهات تعليمية</button>
+                <button class="bg-gray-100 hover:bg-gray-200 px-6 py-2 rounded-full">كتب إلكترونية</button>
+                <button class="bg-gray-100 hover:bg-gray-200 px-6 py-2 rounded-full">أدوات تفاعلية</button>
+            </div>
+
+            <!-- Resources Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Resource Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:-translate-y-2 transition-all duration-300">
+                    <div class="relative h-48">
+                        <img src="https://via.placeholder.com/400x250" alt="resource" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm">
+                            مقال
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">كيف نعزز الثقة بالنفس عند الأطفال؟</h3>
+                        <p class="text-gray-600 mb-4">دليل شامل للوالدين حول بناء ثقة الطفل بنفسه وتعزيز صحته النفسية</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-gray-500">
+                                <i class="fas fa-clock"></i>
+                                <span>10 دقائق قراءة</span>
+                            </div>
+                            <a href="#" class="text-primary font-semibold hover:underline">اقرأ المزيد</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resource Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:-translate-y-2 transition-all duration-300">
+                    <div class="relative h-48">
+                        <img src="https://via.placeholder.com/400x250" alt="resource" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm">
+                            فيديو
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">التعامل مع القلق عند الأطفال</h3>
+                        <p class="text-gray-600 mb-4">فيديو توضيحي يشرح كيفية مساعدة الأطفال في التغلب على القلق</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-gray-500">
+                                <i class="fas fa-video"></i>
+                                <span>15 دقيقة</span>
+                            </div>
+                            <a href="#" class="text-primary font-semibold hover:underline">شاهد الآن</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resource Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:-translate-y-2 transition-all duration-300">
+                    <div class="relative h-48">
+                        <img src="https://via.placeholder.com/400x250" alt="resource" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm">
+                            كتاب إلكتروني
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">دليل الصحة النفسية للأطفال</h3>
+                        <p class="text-gray-600 mb-4">كتاب شامل يغطي جميع جوانب الصحة النفسية للأطفال</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-gray-500">
+                                <i class="fas fa-book"></i>
+                                <span>50 صفحة</span>
+                            </div>
+                            <a href="#" class="text-primary font-semibold hover:underline">حمل الآن</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button class="bg-white border-2 border-primary text-primary px-8 py-3 rounded-full hover:bg-primary hover:text-white transition-colors">
+                    المزيد من المصادر
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Resources -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">مصادر مميزة</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg flex gap-6 items-center">
+                    <div class="w-24 h-24 flex-shrink-0 bg-primary/10 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-podcast text-4xl text-primary"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">بودكاست الصحة النفسية</h3>
+                        <p class="text-gray-600 mb-4">سلسلة حلقات صوتية مع خبراء في مجال الصحة النفسية للأطفال</p>
+                        <a href="#" class="text-primary font-semibold hover:underline">استمع الآن</a>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg flex gap-6 items-center">
+                    <div class="w-24 h-24 flex-shrink-0 bg-primary/10 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-clipboard-check text-4xl text-primary"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">قائمة التحقق اليومية</h3>
+                        <p class="text-gray-600 mb-4">أداة تفاعلية لمتابعة الحالة النفسية للطفل</p>
+                        <a href="#" class="text-primary font-semibold hover:underline">جرب الأداة</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-20 bg-gradient-to-r from-primary to-blue-600">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-white mb-8">اشترك في نشرتنا البريدية</h2>
+            <p class="text-white/80 text-xl mb-12 max-w-2xl mx-auto">
+                احصل على أحدث المصادر والمقالات مباشرة إلى بريدك الإلكتروني
+            </p>
+            <div class="max-w-xl mx-auto flex gap-4">
+                <input type="email" placeholder="البريد الإلكتروني" class="flex-1 px-6 py-4 rounded-full focus:outline-none">
+                <button class="bg-white text-primary px-8 py-4 rounded-full font-semibold hover:shadow-xl transition-all">
+                    اشترك الآن
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div>
+                    <div class="text-3xl font-bold mb-6">SPE</div>
+                    <p class="text-white/70">جمعية متخصصة في تعزيز الصحة النفسية للأطفال من خلال المبادرات الرقمية والمجتمعية</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6">روابط سريعة</h3>
+                    <ul class="space-y-4">
+                        <li><a href="about.html" class="text-white/70 hover:text-white">من نحن</a></li>
+                        <li><a href="resources.html" class="text-white/70 hover:text-white">المصادر الرقمية</a></li>
+                        <li><a href="initiatives.html" class="text-white/70 hover:text-white">مبادراتنا</a></li>
+                        <li><a href="volunteer.html" class="text-white/70 hover:text-white">تطوع معنا</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6">تواصل معنا</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-envelope"></i>
+                            <span class="text-white/70">info@spe.org.sa</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-phone"></i>
+                            <span class="text-white/70">+966 123 456 789</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="text-white/70">الرياض، المملكة العربية السعودية</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6">تابعنا</h3>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-12 pt-8 text-center">
+                <p class="text-white/70">جميع الحقوق محفوظة © جمعية SPE 2024</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
